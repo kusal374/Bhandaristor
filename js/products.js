@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     // Directly use the Google Sheets CSV link
-    const products = await utils.fetchCSV('https://docs.google.com/spreadsheets/d/e/2PACX-1vQpcR_bPO6q1IAoWvem5y5Fao2ilLyPY9A9Pt5UNpDsiBY2aefwxRjsSdsmV9uv54t8sVVNu9mjsJWo/pub?output=csv');
+    const products = await utils.fetchCSV(CONFIG.SHEETS.PRODUCTS);
     
     const container = document.getElementById('productsGrid');
 
