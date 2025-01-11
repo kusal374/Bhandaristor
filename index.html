@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHANDARI LOCAL STORE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/logo.jpg" alt="BHANDARI LOCAL STORE Logo" class="logo">
+                <div class="title-container">
+                    <h1>BHANDARI LOCAL STORE</h1>
+                    <p>Your One-Stop Shop in Sindhuli</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero-section">
+            <div class="video-container">
+                <video controls>
+                    <source src="videos/store-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="owner-photo">
+                <img src="images/owner.jpg" alt="Store Owner">
+            </div>
+        </section>
+
+        <section class="store-images">
+            <div class="store-image">
+                <img src="images/store1.jpg" alt="Store Front">
+            </div>
+            <div class="store-image">
+                <img src="images/store2.jpg" alt="Store Interior">
+            </div>
+            <div class="store-image">
+                <img src="images/store3.jpg" alt="Product Display">
+            </div>
+        </section>
+
+        <h2 class="section-title">Latest Products</h2>
+        <div id="latestProducts" class="product-grid"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BHANDARI LOCAL STORE. All rights reserved.</p>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
+
