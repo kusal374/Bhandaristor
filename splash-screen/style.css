@@ -1,0 +1,175 @@
+/* Splash screen styles */
+.splash-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2C1810;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out;
+}
+
+.splash-container.fade-out {
+    opacity: 0;
+}
+
+.logo-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    animation: logoAnimation 1.5s ease-out forwards;
+}
+
+.logo-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(255,193,7,0.2) 0%, rgba(255,193,7,0.1) 50%, transparent 70%);
+    border-radius: 50%;
+    animation: glowAnimation 2s ease-in-out infinite;
+}
+
+.logo-icon {
+    width: 100%;
+    height: 100%;
+    color: #E8D3C3;
+    position: relative;
+    z-index: 1;
+}
+
+.store-name {
+    font-family: 'Anton', sans-serif;
+    color: #E8D3C3;
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    letter-spacing: 2px;
+    transform: translateX(-100vw);
+    animation: slideInRight 0.8s ease-out 0.5s forwards;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+    color: #B89F8D;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    letter-spacing: 1px;
+    transform: translateX(100vw);
+    animation: slideInLeft 0.8s ease-out 1s forwards;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes logoAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-180deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes glowAnimation {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(-100vw);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile Optimizations */
+@media screen and (max-width: 768px) {
+    .logo-container {
+        gap: 0.5rem;
+        padding: 16px;
+    }
+
+    .logo-wrapper {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0.75rem;
+    }
+
+    .logo-wrapper::before {
+        width: 90px;
+        height: 90px;
+    }
+
+    .store-name {
+        margin-bottom: 0.25rem;
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+
+    .tagline {
+        font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 320px) {
+    .logo-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logo-wrapper::before {
+        width: 70px;
+        height: 70px;
+    }
+
+    .store-name {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .tagline {
+        font-size: clamp(0.8rem, 3vw, 1rem);
+    }
+}
