@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - BHANDARI LOCAL STORE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/logo.jpg" alt="BHANDARI LOCAL STORE Logo" class="logo">
+                <div class="title-container">
+                    <h1>BHANDARI LOCAL STORE</h1>
+                    <p>Your One-Stop Shop in Sindhuli</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">Our Gallery</h2>
+        <div id="galleryGrid" class="gallery-grid"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BHANDARI LOCAL STORE. All rights reserved.</p>
+    </footer>
+
+    <div id="galleryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img id="modalGalleryImage" src="/placeholder.svg" alt="Gallery Image">
+            <p id="modalGalleryCaption"></p>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
+
