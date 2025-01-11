@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#3E2723">
     <title>BHANDARI LOCAL STORE</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -14,47 +15,38 @@
                 <img src="images/logo.jpg" alt="BHANDARI LOCAL STORE Logo" class="logo">
                 <div class="title-container">
                     <h1>BHANDARI LOCAL STORE</h1>
-                    <p>Your One-Stop Shop in Sindhuli</p>
+                    <p>YOUR ONE SHOP FOR QUALITY GOODS!</p>
                 </div>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="products.html">HOT PRODUCTS</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <section class="hero-section">
-            <div class="video-container">
-                <video controls>
-                    <source src="videos/store-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="owner-photo">
-                <img src="images/owner.jpg" alt="Store Owner">
-            </div>
-        </section>
-
         <section class="store-images">
             <div class="store-image">
-                <img src="images/store1.jpg" alt="Store Front">
+                <img src="images/store1.jpg" alt="Store Front View" loading="lazy">
+                <span class="image-caption">Store Img 1</span>
             </div>
             <div class="store-image">
-                <img src="images/store2.jpg" alt="Store Interior">
+                <img src="images/store2.jpg" alt="Store Interior View" loading="lazy">
+                <span class="image-caption">Store Img 2</span>
             </div>
             <div class="store-image">
-                <img src="images/store3.jpg" alt="Product Display">
+                <img src="images/store3.jpg" alt="Product Display Area" loading="lazy">
+                <span class="image-caption">Store Img 3</span>
             </div>
         </section>
 
-        <h2 class="section-title">Latest Products</h2>
+        <h2 class="section-title">LATEST PRODUCT</h2>
         <div id="latestProducts" class="product-grid"></div>
     </main>
 
