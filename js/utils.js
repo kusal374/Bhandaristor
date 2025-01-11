@@ -61,4 +61,32 @@ const utils = {
         };
     }
 };
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.querySelector('.menu-icon');
+    const nav = document.querySelector('nav');
+
+    if (menuIcon && nav) {
+        menuIcon.addEventListener('click', function() {
+            nav.classList.toggle('show');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.menu-icon') && !event.target.closest('nav')) {
+                nav.classList.remove('show');
+            }
+        });
+
+        // Close menu when a link is clicked
+        const navLinks = nav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('show');
+            });
+        });
+    }
+});
+
+
+
 
