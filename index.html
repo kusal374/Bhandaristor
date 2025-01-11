@@ -7,56 +7,92 @@
     <title>BHANDARI LOCAL STORE</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Splash Screen Container */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            border: none;
+        }
+
+        /* Main Content (Initially Hidden) */
+        #main-content {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo-container">
-                <img src="images/logo.jpg" alt="BHANDARI LOCAL STORE Logo" class="logo">
-                <div class="title-container">
-                    <h1>BHANDARI LOCAL STORE</h1>
-                    <p>YOUR ONE SHOP FOR QUALITY GOODS!</p>
+    <!-- Splash Screen Iframe -->
+    <iframe id="splash-screen" src="https://kusal374.github.io/splash-screen-android/" title="Splash Screen"></iframe>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <header>
+            <div class="container">
+                <div class="logo-container">
+                    <img src="images/logo.jpg" alt="BHANDARI LOCAL STORE Logo" class="logo">
+                    <div class="title-container">
+                        <h1>BHANDARI LOCAL STORE</h1>
+                        <p>YOUR ONE SHOP FOR QUALITY GOODS!</p>
+                    </div>
                 </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">HOME</a></li>
+                        <li><a href="products.html">HOT PRODUCTS</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">HOME</a></li>
-                    <li><a href="products.html">HOT PRODUCTS</a></li>
-                    <li><a href="gallery.html">GALLERY</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="about.html">ABOUT US</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        </header>
 
-    <main class="container">
-        <section class="store-images">
-            <div class="store-image">
-                <img src="images/store1.jpg" alt="Store Front View" loading="lazy">
-                <span class="image-caption">Store Img 1</span>
-            </div>
-            <div class="store-image">
-                <img src="images/store2.jpg" alt="Store Interior View" loading="lazy">
-                <span class="image-caption">Store Img 2</span>
-            </div>
-            <div class="store-image">
-                <img src="images/store3.jpg" alt="Product Display Area" loading="lazy">
-                <span class="image-caption">Store Img 3</span>
-            </div>
-        </section>
+        <main class="container">
+            <section class="store-images">
+                <div class="store-image">
+                    <img src="images/store1.jpg" alt="Store Front View" loading="lazy">
+                    <span class="image-caption">Store Img 1</span>
+                </div>
+                <div class="store-image">
+                    <img src="images/store2.jpg" alt="Store Interior View" loading="lazy">
+                    <span class="image-caption">Store Img 2</span>
+                </div>
+                <div class="store-image">
+                    <img src="images/store3.jpg" alt="Product Display Area" loading="lazy">
+                    <span class="image-caption">Store Img 3</span>
+                </div>
+            </section>
 
-        <h2 class="section-title">LATEST PRODUCT</h2>
-        <div id="latestProducts" class="product-grid"></div>
-    </main>
+            <h2 class="section-title">LATEST PRODUCT</h2>
+            <div id="latestProducts" class="product-grid"></div>
+        </main>
 
-    <footer>
-        <p>&copy; 2024 BHANDARI LOCAL STORE. All rights reserved.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2024 BHANDARI LOCAL STORE. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Hide the splash screen after a delay and show the main content
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const splashScreen = document.getElementById('splash-screen');
+                const mainContent = document.getElementById('main-content');
+
+                // Hide splash screen and show main content
+                splashScreen.style.display = 'none';
+                mainContent.style.display = 'block';
+            }, 3000); // Splash screen duration (3 seconds)
+        });
+    </script>
 
     <script src="js/config.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/home.js"></script>
 </body>
 </html>
-
